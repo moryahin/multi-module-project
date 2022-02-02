@@ -1,14 +1,14 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+plugins {
+    kotlin("jvm") version "1.7.0-dev-1251"
+}
+
 buildscript {
     repositories {
         mavenCentral()
         maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
     }
-}
-
-plugins {
-    kotlin("jvm") version "1.7.0-dev-1251"
 }
 
 allprojects {
@@ -36,6 +36,10 @@ allprojects {
 }
 
 subprojects {
+    apply {
+        plugin("org.jetbrains.kotlin.jvm")
+    }
+
     repositories {
         mavenCentral()
         maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")

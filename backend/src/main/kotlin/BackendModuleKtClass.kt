@@ -1,12 +1,9 @@
 package com.kotlin.multimodulespringboot
 
 import Bar
+import myJavaLibrary.Library
 
-fun <T> f(x: T) {
-    Bar<T>(x).foo(x)
-}
-
-class BarChild<T>(value: T) : Bar<T>(value) {
+class BarChild<T>(value: T) : Library<T>(value) {
     override fun foo(x: T) {
         println("override")
     }
