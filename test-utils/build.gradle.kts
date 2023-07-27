@@ -2,6 +2,7 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation(kotlin("reflect"))
     implementation("org.jetbrains:annotations:22.0.0")
+    implementation(project(mapOf("path" to ":backend")))
     implementation(files("libs/lib.jar"))
 
 }
